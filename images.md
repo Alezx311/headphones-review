@@ -1,21 +1,55 @@
-1.  ![01.jpg](images/01.jpg)
-2.  ![02.jpg](images/02.jpg)
-3.  ![03.jpg](images/03.jpg)
-4.  ![04.jpg](images/04.jpg)
-5.  ![05.jpg](images/05.jpg)
-6.  ![06.jpg](images/06.jpg)
-7.  ![07.jpg](images/07.jpg)
-8.  ![08.jpg](images/08.jpg)
-9.  ![09.jpg](images/09.jpg)
-10. ![10.jpg](images/10.jpg)
-11. ![11.jpg](images/11.jpg)
-12. ![12.jpg](images/12.jpg)
-13. ![13.jpg](images/13.jpg)
-14. ![14.jpg](images/14.jpg)
-15. ![15.jpg](images/15.jpg)
-16. ![16.jpg](images/16.jpg)
-17. ![17.jpg](images/17.jpg)
-18. ![18.jpg](images/18.jpg)
-19. ![19.jpg](images/19.jpg)
-20. ![20.jpg](images/20.jpg)
-21. ![21.jpg](images/20.jpg)
+> box
+>
+> ![box](images/box.jpeg)
+
+> button-power
+>
+> ![button-power](images/button-power.png)
+
+> button-volume
+>
+> ![button-volume](images/button-volume.png)
+
+> case
+>
+> ![case](images/case.png)
+
+> compact_case
+>
+> ![compact_case](images/compact_case.jpg)
+
+> easy_to_pair
+>
+> ![easy_to_pair](images/easy_to_pair.jpg)
+
+> great_design
+>
+> ![great_design](images/great_design.jpg)
+
+> headphones_1
+>
+> ![headphones_1](images/headphones_1.jpeg)
+
+> headphones_2
+>
+> ![headphones_2](images/headphones_2.png)
+
+> headphones_on_table
+>
+> ![headphones_on_table](images/headphones_on_table.jpg)
+
+> in_their_case
+>
+> ![in_their_case](images/in_their_case.jpg)
+
+> kz-logo
+>
+> ![kz-logo](images/kz-logo.png)
+
+> presentation_box
+>
+> ![presentation_box](images/presentation_box.jpg)
+
+> tight_fit
+>
+> ![tight_fit](images/tight_fit.jpg)
