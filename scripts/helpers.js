@@ -11,20 +11,22 @@ const isObject = v => typeof v === 'object' && v !== null && !Array.isArray(v)
 const isLength = v => (isArray(v) || isString(v)) && v.length > 0
 const isDate = v => v instanceof Date
 
-class Files {
-  static read(file = 'page.html') {
-    const content = readFileSync(file, { encoding: 'utf-8' })
+class Urls {
+  static read(file) {
+    const filepath = resolve(__dirname, file)
+    const content = readFileSync(filepath, { encoding: 'utf-8' })
+
     return content.trim()
   }
 
-  static write(content, file) {
-    writeFileSync(file, content)
+  static parse(text) {
+    const finded = text.matchAll(rxp).filter(String)
+    return [...new Set(finded)]
   }
 
   static parseUrls() {
-    const html = readFileSync('urls_input.txt', 'utf-8')
-    const finded = html.matchAll(rxp).filter(String)
-    const urls = [...new Set(finded)]
+    const text = readFileSync('urls_input.txt', 'utf-8')
+    const urls = this.parse(text)
     const curl = urls.reduce(
       (a, s) => [
         ...a,
