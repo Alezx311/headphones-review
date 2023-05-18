@@ -1,5 +1,3 @@
-const { log, debug } = require('console')
-
 const RXP_IMAGE_URL = /https\:\/\/.+\/([^\/\\]{1,})\.(jpg|jpeg|png|gif|img)/i
 
 const isImageUrl = v => RXP_IMAGE_URL.test(v)

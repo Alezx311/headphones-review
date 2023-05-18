@@ -1,3 +1,5 @@
+const { readFileSync, exists, existsSync, writeFileSync } = require('fs')
+
 const { debug, warn } = console
 const { isArray } = Array
 const { now } = Date
@@ -8,6 +10,36 @@ const isString = v => typeof v === 'string'
 const isObject = v => typeof v === 'object' && v !== null && !Array.isArray(v)
 const isLength = v => (isArray(v) || isString(v)) && v.length > 0
 const isDate = v => v instanceof Date
+
+class Files {
+  static read(file = 'page.html') {
+    const content = readFileSync(file, { encoding: 'utf-8' })
+    return content.trim()
+  }
+
+  static write(content, file) {
+    writeFileSync(file, content)
+  }
+
+  static parseUrls() {
+    const html = readFileSync('urls_input.txt', 'utf-8')
+    const finded = html.matchAll(rxp).filter(String)
+    const urls = [...new Set(finded)]
+    const curl = urls.reduce(
+      (a, s) => [
+        ...a,
+        `echo "Downloading ${i + 1}/${urls.length}..."`,
+        `curl -o '${s.match(/[^\\\/](.+)$/im)?.[0]}' '${s}'`,
+      ],
+      ['#!/bin/sh\n\n'],
+    )
+
+    writeFileSync('urls_parsed.txt', urls.join('\n'), 'utf-8')
+    writeFileSync('urls_save.sh', curl.join('\n'), 'utf-8')
+
+    return urls
+  }
+}
 
 class Time {
   static DATE_INIT = new Date()
